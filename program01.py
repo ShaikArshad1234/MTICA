@@ -1,5 +1,7 @@
-area=15
-pi=3.14159
-r=round((area/pi)**0.5,6)
-print("radius:",r)
-print(r)
+inpNum=int(input())
+if inpNum<0:
+    print("Invalid")
+elif inpNum%2==0:
+    print("Even")
+else:
+    print("Odd")
