@@ -31,6 +31,15 @@ class Number:
         for i in range(1,self.number+1):
             res*=i
         return res
+    def checkPrime(self):
+        assert(self.number>=0),'Invalid'
+        if(self.number==1 or self.number==2 or self.number==3):
+            return "prime"
+        for i in range(2,self.number):
+            if self.number%i==0:
+                return "Not Prime"
+            return 'Invalid'
+            
 
 
 
@@ -38,5 +47,12 @@ num=int(input())
 ob=Number(num)
 print('checkEven',num,'is',ob.checkEven())
 print('sumDigits',num,'is',ob.sumDigits())
-print(num,'is',ob.checkArmstrong())
+try:
+    print(num,'is',ob.checkArmstrong())
+except AssertionError as a:
+    print(a)
 print('Factorail of',num,'is',ob.calculateFactorail())
+try:
+    print(num,'is',ob.checkPrime())
+except AssertionError as obj:
+    print(obj)
