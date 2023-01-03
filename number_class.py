@@ -15,13 +15,15 @@ class Number:
             total+=int(i)
         return total
     def checkArmstrong(self):
+        assert self.number>=0,'The number should be >=0'
+        temp=str(self.number)
         t=0
-        for i in num:
-            t+=pow(int(i),len(n))
-        if int(num)==t:
+        for i in temp:
+            t+=int(i)**len(temp)
+        if t==self.number:
             return "armstrong"
         else:
-            return "not"
+            return "not armstrong"
     def calculateFactorail(self):
         if self.number==0:
             return 1
@@ -36,5 +38,5 @@ num=int(input())
 ob=Number(num)
 print('checkEven',num,'is',ob.checkEven())
 print('sumDigits',num,'is',ob.sumDigits())
-print('checkArmstrong',num,'is',ob.checkArmstrong())
-print('Factorail of',num,'is',ob.calculateArmstrong())
+print(num,'is',ob.checkArmstrong())
+print('Factorail of',num,'is',ob.calculateFactorail())
