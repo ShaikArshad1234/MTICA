@@ -1,7 +1,3 @@
-inpNum=int(input())
-if inpNum<0:
-    print("Invalid")
-elif inpNum%2==0:
-    print("Even")
-else:
-    print("Odd")
+n1=input().split()
+n2=input().split()
+print(*[int[i]+int[j] for i,j in zip(n1,n2)])
